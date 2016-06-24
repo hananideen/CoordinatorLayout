@@ -1,8 +1,8 @@
 package com.android.coordinatorlayout;
 
+import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         GoogleMap mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng location = new LatLng(2.9234326,101.636846);
+        mMap.addMarker(new MarkerOptions().position(location).title("Location"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 13));
     }
 }
